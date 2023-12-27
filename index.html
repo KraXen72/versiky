@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>verš na rok 2024</title>
-		<meta charset="UTF-8">
-		<style>
-			img {
-				height: 92vh !important;
-				width: auto;
-				cursor: pointer;
-			}
-			.flex {
-				display: flex;
-				justify-content: center;
-			}
-			a {
-				text-decoration: none;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="flex">
-			<a href="verse/1.jpg" download="versNaRok2024" id="download-a">
-				<img id = "img" src="verse/1.jpg">
-			</a>
-		</div>
-	</body>
-	<script>
-		var thisVerse = randomRange(1, 130)
-		console.log(thisVerse);
-
-		var imgElem = document.getElementById("img")
-		var downloadA = document.getElementById("download-a")
-
-		var verseStr = "verse/" + thisVerse + ".jpg"
-		imgElem.src = verseStr;
-		downloadA.href = verseStr;
-
-
-		function randomRange(myMin, myMax) {
-			return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+<head>
+	<title>verš na rok 2024</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		img {
+			height: 92vh !important;
+			width: auto;
+			cursor: pointer;
 		}
-	</script>
+
+		.flex {
+			display: flex;
+			justify-content: center;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="flex">
+		<a href="verse/1.jpg" download="versNaRok2024" id="download-a">
+			<img id="img" src="verse/1.jpg">
+		</a>
+	</div>
+</body>
+<script>
+	var thisVerse = randomRange(1, 130)
+	console.log(thisVerse);
+
+	var imgElem = document.getElementById("img")
+	var downloadA = document.getElementById("download-a")
+
+	var verseStr = "verse/" + thisVerse + ".jpg"
+	imgElem.src = verseStr;
+	downloadA.href = verseStr;
+
+
+	function randomRange(myMin, myMax) {
+		return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+	}
+</script>
+
 </html>
