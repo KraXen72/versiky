@@ -30,7 +30,7 @@
 	</div>
 </body>
 <script>
-	var thisVerse = randomRange(1, 120)
+	var thisVerse = getRandomInt(1, 120)
 	console.log(thisVerse);
 
 	var imgElem = document.getElementById("img")
@@ -41,8 +41,10 @@
 	downloadA.href = verseStr;
 
 
-	function randomRange(min, max) {
-		return Math.random() * (max - min) + min;
+	function getRandomInt(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 </script>
 
