@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>verš na rok 2024</title>
+	<title>verš na rok 2025</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
@@ -24,19 +24,19 @@
 
 <body>
 	<div class="flex">
-		<a href="verse/1.jpg" download="versNaRok2024" id="download-a">
-			<img id="img" src="verse/1.jpg">
+		<a href="verse/1.png" download="versNaRok2025" id="download-a">
+			<img id="img" src="verse/1.png">
 		</a>
 	</div>
 </body>
 <script defer>
-	var thisVerse = getRandomInt(1, 120)
+	var thisVerse = getRandomInt(1, 121)
 	console.log(thisVerse);
 
 	var imgElem = document.getElementById("img")
 	var downloadA = document.getElementById("download-a")
 
-	var verseStr = "verse/" + thisVerse + ".jpg"
+	var verseStr = "verse/" + thisVerse + ".png"
 	imgElem.src = verseStr;
 	downloadA.href = verseStr;
 
