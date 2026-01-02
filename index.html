@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>verš na rok 2025</title>
+	<title>verš na rok 2026</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+		:root, html, body {
+			padding: 0;
+			margin: 0;
+		}
+		a {
+			text-decoration: none;
+		}
 		img {
-			height: 92vh !important;
+			max-height: 100%;
+			height: auto;
 			width: auto;
 			cursor: pointer;
 		}
-
-		.flex {
+		.holder {
+			box-sizing: border-box;
+			padding: 16px;
+			height: 100dvh;
 			display: flex;
 			justify-content: center;
-		}
-
-		a {
-			text-decoration: none;
 		}
 	</style>
 </head>
 
 <body>
-	<div class="flex">
-		<a href="verse/1.png" download="versNaRok2025" id="download-a">
+	<div class="holder flex h-full">
+		<a href="verse/1.png" download="versNaRok2026" id="download-a" title="Kliknutím stiahni verš">
 			<img id="img" src="verse/1.png">
 		</a>
 	</div>
 </body>
-<script defer>
-	var thisVerse = getRandomInt(1, 121)
-	console.log(thisVerse);
-
-	var imgElem = document.getElementById("img")
-	var downloadA = document.getElementById("download-a")
-
-	var verseStr = "verse/" + thisVerse + ".png"
-	imgElem.src = verseStr;
-	downloadA.href = verseStr;
-
-
+<script type="text/javascript">
+	/** 
+	 * min-inclusive, max-inclusive 
+	*/
 	function getRandomInt(min, max) {
 		min = Math.ceil(min);
 		max = Math.floor(max);
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
+	var thisVerse = getRandomInt(1, 161);
+	console.log(thisVerse);
+
+	var imgElem = document.getElementById("img");
+	var downloadA = document.getElementById("download-a");
+
+	var verseStr = "verse/" + thisVerse + ".png";
+	imgElem.src = verseStr;
+	downloadA.href = verseStr;
 </script>
 
 </html>
